@@ -1,0 +1,92 @@
+.skin-base {
+  background-color: #f7f9fd;
+
+  .sidebar {
+    background-color: #fff;
+    box-shadow: 1px 0 1px rgba($gray-300, 0.25),
+                2px 0 2px rgba($gray-300, 0.20),
+                4px 0 4px rgba($gray-300, 0.15),
+                8px 0 8px rgba($gray-300, 0.10),
+                16px 0 16px rgba($gray-300, 0.05);
+  }
+
+  .sidebar-logo {
+    background-color: $secondary;
+    color: #fff;
+  }
+
+  .sidebar-logo-text {
+    color: $gray-700;
+    span { color: $dark; }
+  }
+
+  .sidebar-search {
+    background-color: rgba($gray-200, .6);
+
+    svg { color: $gray-600; }
+
+    .form-control::placeholder {
+      color: $gray-700;
+    }
+
+    &.onfocus {
+      background-color: #fff;
+      border-color: $gray-400;
+      box-shadow: 0 1px 1px rgba($gray-300, 0.25),
+                  0 2px 2px rgba($gray-300, 0.20),
+                  0 4px 4px rgba($gray-300, 0.15),
+                  0 8px 8px rgba($gray-300, 0.10),
+                  0 16px 16px rgba($gray-300, 0.05);
+    }
+  }
+
+  .nav-sidebar {
+    .nav-link {
+      color: $gray-600;
+
+      &:hover,
+      &:focus {
+        color: $dark;
+      }
+
+      &.active {
+        color: $dark;
+
+        svg {
+          color: $dark;
+          fill: rgba($dark, .12);
+        }
+      }
+    }
+
+    &.style-one {
+      .nav-link {
+        color: $gray-700;
+
+        &:hover,
+        &:focus {
+          background-color: $gray-100;
+          color: $gray-700;
+        }
+
+        &.active {
+          background-color: $gray-200;
+          svg { fill: none; }
+        }
+      }
+    }
+
+    &.style-two {
+      .nav-link::before {
+        background-color: $dark;
+      }
+    }
+
+    &.style-three {
+      .nav-link::before,
+      .nav-link::after {
+        background-color: $dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+
+  i { font-size: 18px; }
+}
+
+.sidebar-logo-text {
+  margin-left: 8px;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -1px;
+
+  span { font-weight: 600; }
+}
+
+.sidebar-search {
+  flex-shrink: 0;
+  margin: 0 20px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5px;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  .form-control {
+    border-width: 0;
+    padding: 0;
+    background-color: transparent;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    &::placeholder { text-shadow: none; }
+  }
+}
+
+.sidebar-body {
+  flex: 1;
+  padding: 20px;
+}
+
+.nav-sidebar {
+  display: flex;
+  flex-direction: column;
+
+  .nav-link {
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+
+    + .nav-link { margin-top: 2px; }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+    }
+
+    &.active {
+      font-weight: 500;
+      letter-spacing: -.1px;
+    }
+  }
+
+  &.style-two {
+    .nav-link {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        left: -20px;
+        width: 3px;
+        display: none;
+      }
+
+      &.active::before { display: block; }
+    }
+  }
+
+  &.style-three {
+    .nav-link {
+      position: relative;
+      align-items: center;
+      padding-right: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - .75px);
+        left: -20px;
+        width: 20px;
+        height: 1.5px;
+        display: none;
+      }
+
+      &::after {
+        content: '';
+        position: relative;
+        flex: 1;
+        height: 1.5px;
+        margin-left: 15px;
+        display: none;
+      }
+
+      &.active::before,
+      &.active::after { display: block; }
+    }
+  }
+}
+
+.sidebar-footer {
+  flex-shrink: 0;
+}

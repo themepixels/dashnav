@@ -1,0 +1,25 @@
+{
+  "name": "dashnav",
+  "version": "1.0.0",
+  "description": "Responsive Dashboard Sidebar Navigation",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "themepixels",
+  "license": "",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "bs-html-injector": "^3.0.3",
+    "gulp": "^4.0.2",
+    "gulp-npm-dist": "^1.0.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "feather-icons": "^4.28.0",
+    "perfect-scrollbar": "^1.5.2",
+    "remixicon": "^2.5.0"
+  }
+}
