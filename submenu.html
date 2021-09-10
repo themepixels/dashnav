@@ -33,14 +33,36 @@
         <input type="text" class="form-control" placeholder="Search...">
       </div><!-- sidebar-search -->
       <div class="sidebar-body">
-        <nav class="nav-sidebar">
-          <a href="" class="nav-link active"><i data-feather="package"></i><span>Dashboard</span></a>
-          <a href="" class="nav-link"><i data-feather="monitor"></i><span>Site Analytics</span></a>
-          <a href="" class="nav-link"><i data-feather="shopping-bag"></i><span>Sales Monitoring</span></a>
-          <a href="" class="nav-link"><i data-feather="file-text"></i><span>Documents</span></a>
-          <a href="" class="nav-link"><i data-feather="calendar"></i><span>Calendar</span></a>
-          <a href="" class="nav-link"><i data-feather="briefcase"></i><span>Customers</span></a>
-        </nav>
+        <ul class="nav-sidebar">
+          <li class="nav-item show active">
+            <a href="" class="nav-link with-sub"><i data-feather="package"></i><span>Dashboard</span></a>
+            <nav class="nav-sub">
+              <a href="" class="sub-link active">Overview</a>
+              <a href="" class="sub-link">Insights</a>
+              <a href="" class="sub-link">Transactions</a>
+              <a href="" class="sub-link">Reports</a>
+            </nav>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link with-sub"><i data-feather="monitor"></i><span>Site Analytics</span></a>
+            <nav class="nav-sub">
+              <a href="" class="sub-link">Summary</a>
+              <a href="" class="sub-link">Geolocation</a>
+              <a href="" class="sub-link">Accounts</a>
+            </nav>
+          </li>
+          <li class="nav-item"><a href="" class="nav-link"><i data-feather="shopping-bag"></i><span>Sales Monitoring</span></a></li>
+          <li class="nav-item">
+            <a href="" class="nav-link with-sub"><i data-feather="file-text"></i><span>Documents</span></a>
+            <nav class="nav-sub">
+              <a href="" class="sub-link">Updates</a>
+              <a href="" class="sub-link">Promotions</a>
+              <a href="" class="sub-link">Articles</a>
+            </nav>
+          </li>
+          <li class="nav-item"><a href="" class="nav-link"><i data-feather="calendar"></i><span>Calendar</span></a></li>
+          <li class="nav-item"><a href="" class="nav-link"><i data-feather="briefcase"></i><span>Customers</span></a></li>
+        </ul>
       </div><!-- sidebar-body -->
     </div><!-- sidebar -->
 
@@ -69,8 +91,8 @@
 
       <label class="content-label">Navigation Variants</label>
       <nav class="nav">
-        <a href="index.html" class="nav-link active">One Level</a>
-        <a href="submenu.html" class="nav-link">Sub Menu</a>
+        <a href="index.html" class="nav-link">One Level</a>
+        <a href="submenu.html" class="nav-link active">Sub Menu</a>
         <a href="multilevel.html" class="nav-link">Multi Level</a>
         <a href="groupmenu.html" class="nav-link">Group Menu</a>
       </nav>

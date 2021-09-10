@@ -74,8 +74,24 @@
 }
 
 .nav-sidebar {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+
+  .nav-item {
+    list-style: none;
+
+    &.active .nav-link {
+      font-weight: 500;
+      letter-spacing: -.1px;
+    }
+
+    &.show {
+      .with-sub::after { transform: rotate(90deg); }
+      .nav-sub { display: flex; }
+    }
+  }
 
   .nav-link {
     height: 40px;
@@ -92,6 +108,16 @@
       margin-right: 12px;
     }
 
+    &.with-sub::after {
+      content: '\EA6E';
+      font-family: 'remixicon';
+      font-weight: 400;
+      font-size: 16px;
+      display: inline-block;
+      margin-left: auto;
+      opacity: .6;
+    }
+
     &.active {
       font-weight: 500;
       letter-spacing: -.1px;
@@ -99,6 +125,11 @@
   }
 
   &.style-two {
+    .nav-item.active {
+      .nav-link::before { display: block; }
+      .sub-link.active::before { display: block; }
+    }
+
     .nav-link {
       position: relative;
 
@@ -114,13 +145,27 @@
 
       &.active::before { display: block; }
     }
+
+    .sub-link::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      left: -22px;
+      width: 1px;
+      display: none;
+    }
   }
 
   &.style-three {
+    .nav-item.active {
+      .nav-link::before  { display: block; }
+      .sub-link.active::before { display: block; }
+    }
+
     .nav-link {
       position: relative;
       align-items: center;
-      padding-right: 0;
 
       &::before {
         content: '';
@@ -132,7 +177,7 @@
         display: none;
       }
 
-      &::after {
+      &:not(.with-sub)::after {
         content: '';
         position: relative;
         flex: 1;
@@ -144,7 +189,30 @@
       &.active::before,
       &.active::after { display: block; }
     }
+
+    .sub-link::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      left: -22px;
+      width: 1px;
+      display: none;
+    }
   }
+}
+
+.nav-sub {
+  display: none;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-left: 21px;
+  border-left: 1px solid rgba($border-color, .6);
+}
+
+.sub-link {
+  padding: 5px 0;
+  position: relative;
 }
 
 .sidebar-footer {

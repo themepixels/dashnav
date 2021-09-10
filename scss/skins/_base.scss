@@ -41,6 +41,17 @@
   }
 
   .nav-sidebar {
+    .nav-item {
+      &.active .nav-link {
+        color: $dark;
+
+        svg {
+          color: $dark;
+          fill: rgba($dark, .12);
+        }
+      }
+    }
+
     .nav-link {
       color: $gray-600;
 
@@ -60,6 +71,13 @@
     }
 
     &.style-one {
+      .nav-item.active {
+        .nav-link {
+          background-color: $gray-200;
+          svg { fill: none; }
+        }
+      }
+
       .nav-link {
         color: $gray-700;
 
@@ -77,16 +95,27 @@
     }
 
     &.style-two {
-      .nav-link::before {
+      .nav-link::before,
+      .sub-link::before {
         background-color: $dark;
       }
     }
 
     &.style-three {
       .nav-link::before,
-      .nav-link::after {
+      .nav-link:not(.with-sub)::after,
+      .sub-link::before {
         background-color: $dark;
       }
     }
+  }
+
+  .sub-link {
+    color: $gray-600;
+
+    &:hover,
+    &:focus { color: $gray-700; }
+
+    &.active { color: $dark; }
   }
 }
