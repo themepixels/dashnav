@@ -33,6 +33,14 @@
     }
   }
 
+  .avatar { @include transition(all $transition-time-base); }
+
+  .avatar-body,
+  .sidebar-footer {
+    overflow: hidden;
+    @include transition(all $transition-time-base);
+  }
+
   .content {
     @include transition(margin $transition-time-base);
   }

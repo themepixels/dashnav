@@ -443,6 +443,21 @@ progress {
       .animate .nav-sidebar .nav-link span {
         transition: none; } }
 
+.animate .avatar {
+  transition: all 0.3s; }
+  @media (prefers-reduced-motion: reduce) {
+    .animate .avatar {
+      transition: none; } }
+
+.animate .avatar-body,
+.animate .sidebar-footer {
+  overflow: hidden;
+  transition: all 0.3s; }
+  @media (prefers-reduced-motion: reduce) {
+    .animate .avatar-body,
+    .animate .sidebar-footer {
+      transition: none; } }
+
 .animate .content {
   transition: margin 0.3s; }
   @media (prefers-reduced-motion: reduce) {
@@ -484,6 +499,17 @@ progress {
       .sidebar.minimized .nav-sidebar .nav-link span {
         visibility: hidden;
         opacity: 0; }
+    .sidebar.minimized .sidebar-footer {
+      padding-left: 10px;
+      padding-right: 10px; }
+    .sidebar.minimized .avatar {
+      margin-left: 2px; }
+    .sidebar.minimized .avatar-body {
+      visibility: hidden;
+      opacity: 0;
+      width: 0; }
+    .sidebar.minimized .footer-menu {
+      display: none; }
     .sidebar.minimized + .content {
       margin-left: 60px; }
   .sidebar.expand {
@@ -512,6 +538,17 @@ progress {
       .sidebar.expand .nav-sidebar .nav-link span {
         visibility: visible;
         opacity: 1; }
+    .sidebar.expand .sidebar-footer {
+      padding-left: 20px;
+      padding-right: 20px; }
+    .sidebar.expand .avatar {
+      margin-left: 0; }
+    .sidebar.expand .avatar-body {
+      visibility: visible;
+      opacity: 1;
+      width: auto; }
+    .sidebar.expand .footer-menu {
+      display: flex; }
 
 .sidebar-header {
   padding: 20px;
@@ -577,7 +614,7 @@ progress {
       text-shadow: none; }
 
 .sidebar-body {
-  height: calc(100% - 110px);
+  height: calc(100% - 180px);
   position: relative;
   overflow: hidden; }
 
@@ -699,23 +736,11 @@ progress {
   padding-bottom: 20px;
   height: 70px; }
 
-.footer-menu {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #7586a7;
-  border-radius: 5px; }
-  .footer-menu:hover {
-    background-color: rgba(233, 237, 247, 0.6); }
-  .footer-menu svg {
-    width: 18px;
-    height: 18px; }
-
 .avatar {
+  flex-shrink: 0;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 100%;
   position: relative; }
   .avatar.online::after {
@@ -723,8 +748,8 @@ progress {
     position: absolute;
     bottom: 2px;
     right: 2px;
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     border-radius: 100%;
     background-color: #01a81d;
     box-shadow: 0 0 0 2px #fff; }
@@ -745,7 +770,8 @@ progress {
 .avatar-body {
   flex: 1;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  white-space: nowrap; }
   .avatar-body h6 {
     font-weight: 600;
     margin-bottom: 2px;
@@ -754,6 +780,20 @@ progress {
     display: block;
     font-size: 12px;
     color: #7586a7; }
+
+.footer-menu {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7586a7;
+  border-radius: 5px; }
+  .footer-menu:hover {
+    background-color: rgba(233, 237, 247, 0.6);
+    color: #7586a7; }
+  .footer-menu svg {
+    width: 18px;
+    height: 18px; }
 
 .content {
   position: relative;
