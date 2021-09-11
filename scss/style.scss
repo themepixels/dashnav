@@ -1,5 +1,6 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700&display=swap');
 
 // Variables & Mixins
 @import "variables";
@@ -9,8 +10,10 @@
 @import "../node_modules/bootstrap/scss/bootstrap-reboot";
 
 // Panels
+@import "animate";
 @import "sidebar";
 @import "content";
 
 // Skins
 @import "skins/base";
+@import "skins/blue";

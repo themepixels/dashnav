@@ -1,0 +1,23 @@
+
+.skin-blue {
+  background-color: #fff;
+
+  .sidebar {
+    background-color: #fff;
+    border-right: 1px solid rgba($border-color, .6);
+  }
+
+  .sidebar-logo span {
+    background-color: $primary;
+
+    &::before,
+    &::after {
+      background-color: $primary;
+    }
+  }
+
+  .sidebar-logo-text {
+    color: $dark;
+    span { color: $primary; }
+  }
+}

@@ -10,18 +10,20 @@
                 16px 0 16px rgba($gray-300, 0.05);
   }
 
-  .sidebar-logo {
-    background-color: $secondary;
-    color: #fff;
+  .sidebar-logo span {
+    background-color: $dark;
+
+    &::before,
+    &::after { background-color: rgba($gray-700, .75); }
   }
 
   .sidebar-logo-text {
-    color: $gray-700;
-    span { color: $dark; }
+    color: $dark;
+    span { color: $gray-700; }
   }
 
   .sidebar-search {
-    background-color: rgba($gray-200, .6);
+    background-color: $gray-100;
 
     svg { color: $gray-600; }
 
@@ -31,12 +33,14 @@
 
     &.onfocus {
       background-color: #fff;
-      border-color: $gray-400;
+      border-color: rgba($gray-500, .6);
       box-shadow: 0 1px 1px rgba($gray-300, 0.25),
                   0 2px 2px rgba($gray-300, 0.20),
-                  0 4px 4px rgba($gray-300, 0.15),
-                  0 8px 8px rgba($gray-300, 0.10),
-                  0 16px 16px rgba($gray-300, 0.05);
+                  0 4px 4px rgba($gray-300, 0.15);
+    }
+
+    &.onhover {
+      background-color: rgba($gray-200, .6);
     }
   }
 
@@ -73,7 +77,9 @@
     &.style-one {
       .nav-item.active {
         .nav-link {
+          color: $dark;
           background-color: $gray-200;
+
           svg { fill: none; }
         }
       }
@@ -116,6 +122,39 @@
     &:hover,
     &:focus { color: $gray-700; }
 
-    &.active { color: $dark; }
+    &.active { color: $gray-700; }
   }
+
+  .content-menu {
+    color: $gray-600;
+
+    &:hover {
+      background-color: rgba($gray-200, .6);
+      color: $gray-600;
+    }
+  }
+
+  .content-body {
+    .nav-link {
+      background-color: $gray-100;
+      border-color: $gray-400;
+      color: $gray-600;
+
+      &:hover,
+      &:focus {
+        border-color: $gray-500;
+      }
+
+      &.active {
+        background-color: #fff;
+        border-color: $gray-600;
+        color: $gray-800;
+        box-shadow: 0 1px 1px rgba($gray-400, 0.25),
+                    0 2px 2px rgba($gray-400, 0.20),
+                    0 4px 4px rgba($gray-400, 0.15);
+      }
+    }
+  }
+
+  .content-label { color: $gray-500; }
 }

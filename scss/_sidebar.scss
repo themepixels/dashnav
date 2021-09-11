@@ -7,6 +7,90 @@
   width: 260px;
   display: flex;
   flex-direction: column;
+  z-index: 700;
+
+  &.minimized {
+    width: 60px;
+
+    .sidebar-header {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .sidebar-logo { margin-left: 2px; }
+
+    .sidebar-logo-text {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .sidebar-search {
+      margin-left: 10px;
+      margin-right: 10px;
+
+      svg { margin-right: 0; }
+
+      .form-control {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    .nav-sidebar {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .nav-link {
+        svg { margin-right: 0; }
+
+        span {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+    }
+
+    + .content { margin-left: 60px; }
+  }
+
+  &.expand {
+    width: 260px;
+
+    .sidebar-header {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .sidebar-logo { margin-left: 0; }
+
+    .sidebar-logo-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .sidebar-search {
+      margin-left: 20px;
+      margin-right: 20px;
+
+      svg { margin-right: 12px; }
+
+      .form-control {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .nav-sidebar {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .nav-link svg { margin-right: 12px; }
+      .nav-link span {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .sidebar-header {
@@ -14,24 +98,46 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  height: 70px;
 }
 
 .sidebar-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 100%;
+  padding: 0 8px;
 
-  i { font-size: 18px; }
+  span {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 2.5px;
+    border-radius: 3px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 2.5px;
+      border-radius: inherit;
+    }
+
+    &::before {
+      top: -5px;
+      right: 2px;
+    }
+
+    &::after {
+      bottom: -5px;
+      left: 2px;
+    }
+  }
 }
 
 .sidebar-logo-text {
-  margin-left: 8px;
-  font-size: 21px;
+  margin-left: 5px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: -1px;
+  white-space: nowrap;
 
   span { font-weight: 600; }
 }
@@ -39,19 +145,19 @@
 .sidebar-search {
   flex-shrink: 0;
   margin: 0 20px;
-  padding: 0 10px;
+  padding: 0 8px;
   display: flex;
   align-items: center;
   height: 40px;
-  border: 1px solid transparent;
-  border-radius: 5px;
+  border: 1.5px solid transparent;
+  border-radius: 6px;
 
   svg {
     width: 20px;
     height: 20px;
     stroke-width: 2.5px;
     flex-shrink: 0;
-    margin-right: 8px;
+    margin-right: 12px;
   }
 
   .form-control {
@@ -69,13 +175,14 @@
 }
 
 .sidebar-body {
-  flex: 1;
-  padding: 20px;
+  height: calc(100% - 110px);
+  position: relative;
+  overflow: hidden;
 }
 
 .nav-sidebar {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 
@@ -99,10 +206,12 @@
     display: flex;
     align-items: center;
     border-radius: 5px;
+    white-space: nowrap;
 
     + .nav-link { margin-top: 2px; }
 
     svg {
+      flex-shrink: 0;
       width: 20px;
       height: 20px;
       margin-right: 12px;
@@ -213,6 +322,8 @@
 .sub-link {
   padding: 5px 0;
   position: relative;
+
+  &.active { font-weight: 500; }
 }
 
 .sidebar-footer {

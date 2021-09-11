@@ -1,42 +1,49 @@
 
 .content {
+  position: relative;
   margin-left: 260px;
   min-height: 100vh;
-  padding: 40px;
+}
+
+.content-header {
+  padding: 20px 30px;
+  position: relative;
+}
+
+.content-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5px;
+  }
+}
+
+.content-body {
+  padding: 20px 40px;
 
   .nav { display: flex; }
 
   .nav-link {
     display: block;
-    padding: 5px 15px;
-    background-color: $gray-200;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    color: $gray-600;
-
-    &:hover,
-    &:focus {
-      border-color: $gray-400;
-      background-color: $gray-100;
-      box-shadow: 0 0 0 .5px $gray-400;
-    }
+    padding: 8px 20px;
+    border: 1.5px solid transparent;
+    border-radius: 6px;
 
     + .nav-link { margin-left: 10px; }
-
-    &.active {
-      background-color: #fff;
-      border-color: $gray-500;
-      color: $gray-800;
-      box-shadow: 0 0 0 .5px $gray-500;
-    }
   }
 }
 
 .content-label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: $gray-500;
 }

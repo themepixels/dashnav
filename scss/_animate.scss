@@ -1,0 +1,39 @@
+
+.animate {
+  .sidebar {
+    @include transition(width $transition-time-base);
+  }
+
+  .sidebar-header {
+    overflow: hidden;
+    @include transition(padding $transition-time-base);
+  }
+
+  .sidebar-logo,
+  .sidebar-logo-text {
+    @include transition(all $transition-time-base);
+  }
+
+  .sidebar-search {
+    @include transition(margin $transition-time-base);
+
+    svg,
+    .form-control {
+      @include transition(all $transition-time-base);
+    }
+  }
+
+  .nav-sidebar {
+    overflow: hidden;
+    @include transition(padding $transition-time-base);
+
+    .nav-link svg,
+    .nav-link span {
+      @include transition(all $transition-time-base);
+    }
+  }
+
+  .content {
+    @include transition(margin $transition-time-base);
+  }
+}

@@ -10,8 +10,11 @@ $gray-800:                          #27385c;
 $gray-900:                          #142341;
 
 // Fonts
-$font-family-base:                  'Archivo', sans-serif;
-$font-size-base:                    .9125rem;
+$font-family-base:                  'Public Sans', sans-serif;
+$font-size-base:                    .875rem;
 
 // Links
 $link-decoration:                   none;
+
+// Interactions
+$transition-time-base:              0.3s;
