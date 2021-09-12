@@ -34,7 +34,12 @@ $(function(){
   // single level menu
   $('.nav-sidebar > .nav-link').on('click', function(e){
     e.preventDefault();
+
+    // remove active siblings
     $(this).addClass('active').siblings().removeClass('active');
+
+    // remove active siblings from other nav
+    $(this).closest('.nav-sidebar').siblings().find('.active').removeClass('active');
   });
 
   // two level menu

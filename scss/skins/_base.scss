@@ -8,6 +8,8 @@
                 4px 0 4px rgba($gray-300, 0.15),
                 8px 0 8px rgba($gray-300, 0.10),
                 16px 0 16px rgba($gray-300, 0.05);
+
+    hr { background-color: $gray-300; }
   }
 
   .sidebar-logo span {
@@ -136,6 +138,10 @@
   }
 
   .nav-group-label { color: $gray-600; }
+
+  .sidebar-footer {
+    background-image: linear-gradient(transparent, rgba(#fff, .5) 50%, #fff);
+  }
 
   .avatar-initial {
     background-color: $gray-800;

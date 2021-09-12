@@ -45,7 +45,6 @@
 
   .avatar-body,
   .sidebar-footer {
-    overflow: hidden;
     @include transition(all $transition-time-base);
   }
 

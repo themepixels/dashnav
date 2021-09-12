@@ -3409,6 +3409,9 @@ progress {
       width: auto; }
     .sidebar.minimized.expand .footer-menu {
       display: flex; }
+  .sidebar hr {
+    margin: 0 20px;
+    opacity: 1; }
 
 .sidebar-header {
   padding: 20px;
@@ -3647,7 +3650,16 @@ progress {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-  height: 70px; }
+  height: 70px;
+  position: relative; }
+  .sidebar-footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px;
+    top: -40px;
+    z-index: 100; }
 
 .avatar {
   flex-shrink: 0;
@@ -3683,7 +3695,8 @@ progress {
 .avatar-body {
   flex: 1;
   padding-left: 10px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  overflow: hidden; }
   .avatar-body h6 {
     font-weight: 600;
     margin-bottom: 0; }
@@ -3764,6 +3777,8 @@ progress {
   .skin-base .sidebar {
     background-color: #fff;
     box-shadow: 1px 0 1px rgba(220, 228, 242, 0.25), 2px 0 2px rgba(220, 228, 242, 0.2), 4px 0 4px rgba(220, 228, 242, 0.15), 8px 0 8px rgba(220, 228, 242, 0.1), 16px 0 16px rgba(220, 228, 242, 0.05); }
+    .skin-base .sidebar hr {
+      background-color: #dce4f2; }
   .skin-base .sidebar-logo span {
     background-color: #142341; }
     .skin-base .sidebar-logo span::before, .skin-base .sidebar-logo span::after {
@@ -3832,6 +3847,8 @@ progress {
     border-bottom-color: #dce4f2; }
   .skin-base .nav-group-label {
     color: #7586a7; }
+  .skin-base .sidebar-footer {
+    background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.5) 50%, #fff); }
   .skin-base .avatar-initial {
     background-color: #27385c;
     color: #fff; }
@@ -4389,7 +4406,6 @@ progress {
 
 .animate .avatar-body,
 .animate .sidebar-footer {
-  overflow: hidden;
   transition: all 0.3s; }
   @media (prefers-reduced-motion: reduce) {
     .animate .avatar-body,
