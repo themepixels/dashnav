@@ -21,7 +21,7 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style.min.css">
   </head>
-  <body class="skin-base">
+  <body class="skin-red animate">
 
     <div class="sidebar">
       <div class="sidebar-header">
@@ -82,13 +82,13 @@
       </div><!-- content-header -->
       <div class="content-body">
         <label class="content-label">Navigation Skins</label>
-        <nav class="nav">
-          <a href="" class="nav-link active">Base</a>
-          <a href="" class="nav-link">Blue/White</a>
-          <a href="" class="nav-link">Dark</a>
-          <a href="" class="nav-link">Red/Dark</a>
-          <a href="" class="nav-link">White/Indigo</a>
-          <a href="" class="nav-link">White/Gradient</a>
+        <nav id="navigationSkins" class="nav">
+          <a href="" data-skin="base" class="nav-link active">Base</a>
+          <a href="" data-skin="blue" class="nav-link">Blue/White</a>
+          <a href="" data-skin="dark" class="nav-link">Dark</a>
+          <a href="" data-skin="red"class="nav-link">Red/Dark</a>
+          <a href="" data-skin="indigo" class="nav-link">White/Indigo</a>
+          <a href="" data-skin="gradient" class="nav-link">White/Gradient</a>
         </nav>
 
         <br><br>
@@ -96,9 +96,9 @@
         <label class="content-label">Navigation Styles</label>
         <nav id="navigationStyles" class="nav">
           <a href="" data-style="base" class="nav-link active">Base</a>
-          <a href="" data-style="style-one" class="nav-link">Style 01</a>
-          <a href="" data-style="style-two" class="nav-link">Style 02</a>
-          <a href="" data-style="style-three" class="nav-link">Style 03</a>
+          <a href="" data-style="one" class="nav-link">Style 01</a>
+          <a href="" data-style="two" class="nav-link">Style 02</a>
+          <a href="" data-style="three" class="nav-link">Style 03</a>
         </nav>
 
         <br><br>
@@ -116,6 +116,7 @@
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="lib/feathericons/feather.min.js"></script>
+    <script src="lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
     <script src="assets/js/script.js"></script>
   </body>

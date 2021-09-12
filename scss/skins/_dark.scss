@@ -1,0 +1,157 @@
+.skin-dark {
+  background-color: #f7f9fd;
+
+  .sidebar {
+    background-color: $dark;
+    @include font-smoothing();
+  }
+
+  .sidebar-logo span {
+    background-color: $primary;
+
+    &::before,
+    &::after { background-color: lighten($primary, 10%); }
+  }
+
+  .sidebar-logo-text {
+    color: $light;
+    span { color: $primary; }
+  }
+
+  .search-body {
+    background-color: rgba($gray-800, .6);
+
+    svg {
+      color: $gray-600;
+      stroke-width: 2px;
+    }
+
+    .form-control { color: $light; }
+    .form-control::placeholder {
+      color: $gray-600;
+    }
+
+    &.onfocus {
+      background-color: transparent;
+      border-color: $gray-700;
+    }
+
+    &.onhover {
+      background-color: rgba($gray-800, .4);
+    }
+  }
+
+  .nav-sidebar {
+    .nav-item {
+      &.active .nav-link {
+        color: $light;
+
+        svg {
+          color: $light;
+          fill: rgba($light, .12);
+        }
+      }
+    }
+
+    .nav-link {
+      color: $gray-600;
+
+      &:hover,
+      &:focus {
+        color: $light;
+      }
+
+      svg { stroke-width: 2px; }
+
+      &.active {
+        color: $light;
+
+        svg {
+          color: $light;
+          fill: rgba($light, .12);
+        }
+      }
+    }
+
+    &.style-one {
+      .nav-item.active {
+        .nav-link {
+          color: $light;
+          background-color: $gray-800;
+
+          svg { fill: none; }
+        }
+      }
+
+      .nav-link {
+        color: $gray-600;
+
+        &:hover,
+        &:focus {
+          background-color: rgba($gray-800, .3);
+          color: $light;
+        }
+
+        &.active {
+          background-color: $gray-800;
+          color: $light;
+
+          svg { fill: none; }
+        }
+      }
+    }
+
+    &.style-two {
+      .nav-link::before,
+      .sub-link::before {
+        background-color: $light;
+      }
+    }
+
+    &.style-three {
+      .nav-link::before,
+      .nav-link:not(.with-sub)::after,
+      .sub-link::before {
+        background-color: $gray-600;
+      }
+    }
+  }
+
+  .nav-sub { border-left: 1px solid $gray-800; }
+
+  .sub-link {
+    color: $gray-600;
+
+    &:hover,
+    &:focus { color: $gray-500; }
+
+    &.active { color: $light; }
+  }
+
+  .nav-group {
+    border-top-color: rgba($gray-800, .6);
+    border-bottom-color: rgba($gray-800, .6);
+  }
+
+  .nav-group-label { color: $gray-600; }
+
+  .avatar.online::after {
+    box-shadow: 0 0 0 2px $dark;
+  }
+
+  .avatar-initial {
+    background-color: $primary;
+    color: #fff;
+  }
+
+  .avatar-body {
+    h6 { color: $light; }
+    span { color: $gray-600; }
+  }
+
+  .footer-menu {
+    color: $gray-600;
+
+    &:hover { color: $gray-700; }
+  }
+}

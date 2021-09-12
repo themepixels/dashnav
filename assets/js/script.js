@@ -64,16 +64,31 @@ $(function(){
 
 
   // for demo only
+  $('#navigationSkins a').on('click', function(e){
+    e.preventDefault();
+    var s = $(this).attr('data-skin');
+
+    $(this).addClass('active').siblings().removeClass('active');
+
+    $('body').attr('class', function(i, c){
+      return c.replace(/(^|\s)skin-\S+/g, '');
+    });
+
+    $('body').addClass('skin-'+s);
+  });
+
   $('#navigationStyles a').on('click', function(e){
     e.preventDefault();
     var s = $(this).attr('data-style');
 
     $(this).addClass('active').siblings().removeClass('active');
 
-    $('.nav-sidebar').removeClass('style-one style-two style-three');
+    $('.nav-sidebar').attr('class', function(i, c){
+      return c.replace(/(^|\s)style-\S+/g, '');
+    });
 
     if(s !== 'base') {
-      $('.nav-sidebar').addClass(s);
+      $('.nav-sidebar').addClass('style-'+s);
     }
   });
 })
