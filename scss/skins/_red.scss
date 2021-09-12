@@ -3,7 +3,7 @@
   background-color: #f7f9fd;
 
   .sidebar {
-    background-color: #2D4059;
+    background-color: $color-01;
     @include font-smoothing();
   }
 

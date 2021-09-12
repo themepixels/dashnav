@@ -1,15 +1,8 @@
 
 .skin-blue {
-  background-color: #f7f9fd;
+  background-color: #fff;
 
-  .sidebar {
-    background-color: #fff;
-    box-shadow: 1px 0 1px rgba($gray-300, 0.25),
-                2px 0 2px rgba($gray-300, 0.20),
-                4px 0 4px rgba($gray-300, 0.15),
-                8px 0 8px rgba($gray-300, 0.10),
-                16px 0 16px rgba($gray-300, 0.05);
-  }
+  .sidebar { background-color: #f7f9fd; }
 
   .sidebar-logo span {
     background-color: $primary;
@@ -159,5 +152,15 @@
     color: $gray-600;
 
     &:hover { color: $primary; }
+  }
+
+  .content {
+    position: relative;
+    z-index: 800;
+    box-shadow: -1px 0 1px rgba($gray-300, 0.22),
+                -2px 0 2px rgba($gray-300, 0.17),
+                -4px 0 4px rgba($gray-300, 0.12),
+                -8px 0 8px rgba($gray-300, 0.07),
+                -16px 0 16px rgba($gray-300, 0.02);
   }
 }
