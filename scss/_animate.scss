@@ -15,12 +15,12 @@
   }
 
   .sidebar-search {
-    @include transition(margin $transition-time-base);
+    @include transition(padding $transition-time-base);
+  }
 
-    svg,
-    .form-control {
-      @include transition(all $transition-time-base);
-    }
+  .search-body svg,
+  .search-body .form-control {
+    @include transition(all $transition-time-base);
   }
 
   .nav-sidebar {

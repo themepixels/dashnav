@@ -22,18 +22,18 @@
     span { color: $gray-700; }
   }
 
-  .sidebar-search {
+  .search-body {
     background-color: $gray-100;
 
     svg { color: $gray-600; }
 
     .form-control::placeholder {
-      color: $gray-700;
+      color: $gray-500;
     }
 
     &.onfocus {
       background-color: #fff;
-      border-color: rgba($gray-500, .6);
+      border-color: $gray-600;
       box-shadow: 0 1px 1px rgba($gray-300, 0.25),
                   0 2px 2px rgba($gray-300, 0.20),
                   0 4px 4px rgba($gray-300, 0.15);
@@ -116,6 +116,8 @@
     }
   }
 
+  .nav-sub { border-left: 1px solid rgba($border-color, .6); }
+
   .sub-link {
     color: $gray-600;
 
@@ -125,16 +127,34 @@
     &.active { color: $gray-700; }
   }
 
+  .nav-group {
+    border-top-color: $border-color;
+    border-bottom-color: $border-color;
+  }
+
+  .nav-group-label { color: $gray-600; }
+
   .avatar-initial {
     background-color: $gray-800;
     color: #fff;
+  }
+
+  .avatar-body {
+    h6 { color: $dark; }
+    span { color: $gray-600; }
+  }
+
+  .footer-menu {
+    color: $gray-600;
+
+    &:hover { color: $gray-700; }
   }
 
   .content-menu {
     color: $gray-600;
 
     &:hover {
-      background-color: rgba($gray-200, .6);
+      background-color: $gray-200;
       color: $gray-600;
     }
   }

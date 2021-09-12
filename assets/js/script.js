@@ -3,11 +3,19 @@ $(function(){
 
   feather.replace();
 
-  $('.sidebar').on('mouseenter mouseleave', function(e){
-    $(this).toggleClass('expand', e.type === 'mouseenter');
+  new PerfectScrollbar('.sidebar-body', {
+    suppressScrollX: true
   });
 
-  $('.sidebar-search .form-control').on('focusin focusout', function(e){
+  $('.sidebar-search, .nav-sidebar, .sidebar-footer').on('mouseenter mouseleave', function(e) {
+    var isHover = (e.type === 'mouseenter')? true : false;
+
+    setTimeout(function(){
+      $('.sidebar').toggleClass('expand', isHover);
+    }, 300);
+  });
+
+  $('.search-body .form-control').on('focusin focusout', function(e){
     $(this).parent().removeClass('onhover');
 
     if(e.type === 'focusin') {
@@ -17,7 +25,7 @@ $(function(){
     }
   });
 
-  $('.sidebar-search').on('mouseover mouseleave', function(e){
+  $('.search-body').on('mouseover mouseleave', function(e){
     if(!$(this).hasClass('onfocus')) {
       $(this).toggleClass('onhover', e.type === 'mouseover');
     }

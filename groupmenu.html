@@ -21,7 +21,7 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style.min.css">
   </head>
-  <body class="skin-base">
+  <body class="skin-base animate">
 
     <div class="sidebar">
       <div class="sidebar-header">
@@ -34,45 +34,53 @@
           <input type="text" class="form-control" placeholder="Search...">
         </div><!-- search-body -->
       </div><!-- sidebar-search -->
-      <div class="sidebar-body">
-        <ul class="nav-sidebar">
-          <li class="nav-item show active">
-            <a href="" class="nav-link with-sub"><i data-feather="package"></i><span>Dashboard</span></a>
-            <nav class="nav-sub">
-              <a href="" class="sub-link active">Overview</a>
-              <a href="" class="sub-link">Insights</a>
-              <a href="" class="sub-link">Transactions</a>
-              <a href="" class="sub-link">Reports</a>
-            </nav>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link with-sub"><i data-feather="monitor"></i><span>Site Analytics</span></a>
-            <nav class="nav-sub">
-              <a href="" class="sub-link">Summary</a>
-              <a href="" class="sub-link">Geolocation</a>
-              <a href="" class="sub-link">Accounts</a>
-            </nav>
-          </li>
-          <li class="nav-item"><a href="" class="nav-link"><i data-feather="shopping-bag"></i><span>Sales Monitoring</span></a></li>
-          <li class="nav-item">
-            <a href="" class="nav-link with-sub"><i data-feather="file-text"></i><span>Documents</span></a>
-            <nav class="nav-sub">
-              <a href="" class="sub-link">Updates</a>
-              <a href="" class="sub-link">Promotions</a>
-              <a href="" class="sub-link">Articles</a>
-            </nav>
-          </li>
-          <li class="nav-item"><a href="" class="nav-link"><i data-feather="calendar"></i><span>Calendar</span></a></li>
-          <li class="nav-item"><a href="" class="nav-link"><i data-feather="briefcase"></i><span>Customers</span></a></li>
-        </ul>
+      <div class="sidebar-body pt-20">
+        <div class="nav-group">
+          <div class="nav-group-label">Management</div>
+          <ul class="nav-sidebar">
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub"><i data-feather="package"></i><span>Dashboard</span></a>
+              <nav class="nav-sub">
+                <a href="" class="sub-link">Overview</a>
+                <a href="" class="sub-link">Insights</a>
+                <a href="" class="sub-link">Transactions</a>
+                <a href="" class="sub-link">Reports</a>
+              </nav>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub"><i data-feather="monitor"></i><span>Site Analytics</span></a>
+              <nav class="nav-sub">
+                <a href="" class="sub-link">Summary</a>
+                <a href="" class="sub-link">Geolocation</a>
+                <a href="" class="sub-link">Accounts</a>
+              </nav>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link"><i data-feather="shopping-bag"></i><span>Sales Monitoring</span></a></li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub"><i data-feather="file-text"></i><span>Documents</span></a>
+              <nav class="nav-sub">
+                <a href="" class="sub-link">Updates</a>
+                <a href="" class="sub-link">Promotions</a>
+                <a href="" class="sub-link">Articles</a>
+              </nav>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link"><i data-feather="calendar"></i><span>Calendar</span></a></li>
+            <li class="nav-item"><a href="" class="nav-link"><i data-feather="briefcase"></i><span>Customers</span></a></li>
+          </ul>
+        </div><!-- nav-group -->
+        <div class="nav-group">
+          <div class="nav-group-label">Account Settings</div>
+        </div><!-- nav-group -->
       </div><!-- sidebar-body -->
       <div class="sidebar-footer">
         <a href="" class="avatar online"><span class="avatar-initial">s</span></a>
         <div class="avatar-body">
-          <h6>Samantha Doe</h6>
-          <span>Administrator</span>
+          <div class="d-flex align-items-center justify-content-between">
+            <h6>Samantha Doe</h6>
+            <a href="" class="footer-menu"><i class="ri-settings-4-line"></i></a>
+          </div>
+          <span>Superuser/Administrator</span>
         </div><!-- avatar-body -->
-        <a href="" class="footer-menu"><i data-feather="more-vertical"></i></a>
       </div><!-- sidebar-footer -->
     </div><!-- sidebar -->
 
@@ -106,8 +114,8 @@
         <label class="content-label">Navigation Variants</label>
         <nav class="nav">
           <a href="index.html" class="nav-link">One Level</a>
-          <a href="submenu.html" class="nav-link active">Sub Menu</a>
-          <a href="groupmenu.html" class="nav-link">Group Menu</a>
+          <a href="submenu.html" class="nav-link">Sub Menu</a>
+          <a href="groupmenu.html" class="nav-link active">Group Menu</a>
         </nav>
       </div><!-- content-body -->
     </div><!-- content -->
@@ -116,6 +124,7 @@
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="lib/feathericons/feather.min.js"></script>
+    <script src="lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
     <script src="assets/js/script.js"></script>
   </body>

@@ -29,8 +29,10 @@
         <a href="#" class="sidebar-logo-text">dash<span>nav</span></a>
       </div><!-- sidebar-header -->
       <div class="sidebar-search">
-        <i data-feather="search"></i>
-        <input type="text" class="form-control" placeholder="Search...">
+        <div class="search-body">
+          <i data-feather="search"></i>
+          <input type="text" class="form-control" placeholder="Search...">
+        </div><!-- search-body -->
       </div><!-- sidebar-search -->
       <div class="sidebar-body">
         <nav class="nav-sidebar">
@@ -45,10 +47,12 @@
       <div class="sidebar-footer">
         <a href="" class="avatar online"><span class="avatar-initial">s</span></a>
         <div class="avatar-body">
-          <h6>Samantha Doe</h6>
-          <span>Administrator</span>
+          <div class="d-flex align-items-center justify-content-between">
+            <h6>Samantha Doe</h6>
+            <a href="" class="footer-menu"><i class="ri-settings-4-line"></i></a>
+          </div>
+          <span>Superuser/Administrator</span>
         </div><!-- avatar-body -->
-        <a href="" class="footer-menu"><i data-feather="more-vertical"></i></a>
       </div><!-- sidebar-footer -->
     </div><!-- sidebar -->
 
