@@ -1,8 +1,3 @@
-// color variables
-$color-01: #2D4059;
-$color-02: #EA5455;
-$color-03: #F07B3F;
-$color-04: #FFD460;
 
 .skin-red {
   background-color: #f7f9fd;
@@ -30,7 +25,7 @@ $color-04: #FFD460;
 
     svg {
       color: $gray-600;
-      stroke-width: 2px;
+      stroke-width: 1.5px;
     }
 
     .form-control { color: $light; }
@@ -51,12 +46,9 @@ $color-04: #FFD460;
   .nav-sidebar {
     .nav-item {
       &.active .nav-link {
-        color: $light;
+        color: $color-02;
 
-        svg {
-          color: $light;
-          fill: rgba($light, .12);
-        }
+        svg { color: $color-02; }
       }
     }
 
@@ -65,28 +57,28 @@ $color-04: #FFD460;
 
       &:hover,
       &:focus {
-        color: $light;
+        color: $gray-500;
       }
 
-      svg { stroke-width: 2px; }
+      svg { stroke-width: 1.5px; }
 
       &.active {
-        color: $light;
+        color: $color-02;
 
-        svg {
-          color: $light;
-          fill: rgba($light, .12);
-        }
+        svg { color: $color-02; }
       }
     }
 
     &.style-one {
       .nav-item.active {
         .nav-link {
-          color: $light;
-          background-color: $gray-800;
+          color: #fff;
+          background-color: $color-02;
 
-          svg { fill: none; }
+          svg {
+            fill: none;
+            color: #fff;
+          }
         }
       }
 
@@ -95,36 +87,41 @@ $color-04: #FFD460;
 
         &:hover,
         &:focus {
-          background-color: rgba($gray-800, .3);
-          color: $light;
+          background-color: lighten($color-01, 2%);
+          color: $gray-500;
         }
 
         &.active {
-          background-color: $gray-800;
-          color: $light;
+          background-color: $color-02;
+          color: #fff;
 
-          svg { fill: none; }
+          svg {
+            fill: none;
+            color: #fff;
+          }
         }
       }
     }
 
     &.style-two {
-      .nav-link::before,
-      .sub-link::before {
-        background-color: $light;
-      }
+      .nav-link::before { background-color: $color-02; }
+      .sub-link::before { background-color: $gray-400; }
     }
 
     &.style-three {
       .nav-link::before,
-      .nav-link:not(.with-sub)::after,
-      .sub-link::before {
-        background-color: $gray-600;
+      .nav-link:not(.with-sub)::after {
+        background-color: $color-02;
       }
+
+      .sub-link::before { background-color: $gray-400; }
+    }
+
+    &.style-two,
+    &.style-three {
+      .nav-sub::before { border-color: rgba($light, .1); }
     }
   }
-
-  .nav-sub { border-left: 1px solid $gray-800; }
 
   .sub-link {
     color: $gray-600;
@@ -132,23 +129,23 @@ $color-04: #FFD460;
     &:hover,
     &:focus { color: $gray-500; }
 
-    &.active { color: $light; }
+    &.active { color: $gray-400; }
   }
 
   .nav-group {
-    border-top-color: rgba($gray-800, .6);
-    border-bottom-color: rgba($gray-800, .6);
+    border-top-color: $gray-700;
+    border-bottom-color: $gray-700;
   }
 
   .nav-group-label { color: $gray-600; }
 
   .avatar.online::after {
-    box-shadow: 0 0 0 2px $dark;
+    box-shadow: 0 0 0 2px $color-01;
   }
 
   .avatar-initial {
-    background-color: $primary;
-    color: #fff;
+    background-color: $color-04;
+    color: $color-01;
   }
 
   .avatar-body {

@@ -3,7 +3,7 @@ $(function(){
 
   feather.replace();
 
-  new PerfectScrollbar('.sidebar-body', {
+  const sb = new PerfectScrollbar('.sidebar-body', {
     suppressScrollX: true
   });
 
@@ -47,6 +47,8 @@ $(function(){
       $(this).parent().addClass('active').siblings().removeClass('active');
       $(this).parent().siblings().find('.sub-link').removeClass('active');
     }
+
+    sb.update();
   });
 
   $('.nav-sub').on('click', '.sub-link', function(e){
@@ -54,14 +56,20 @@ $(function(){
     $(this).addClass('active').siblings().removeClass('active');
     $(this).closest('.nav-item').addClass('active').siblings().removeClass('active');
     $(this).closest('.nav-item').siblings().find('.sub-link').removeClass('active');
+
+    $(this).closest('.nav-group').siblings().find('.active').removeClass('active');
+  });
+
+  $('.nav-group-label').on('click', function(){
+    $(this).closest('.nav-group').toggleClass('show');
+    $(this).closest('.nav-group').siblings().removeClass('show');
   });
 
   // content menu
   $('#contentMenu').on('click', function(e){
     e.preventDefault();
     $('.sidebar').toggleClass('minimized');
-  })
-
+  });
 
   // for demo only
   $('#navigationSkins a').on('click', function(e){

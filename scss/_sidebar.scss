@@ -2,9 +2,9 @@
 .sidebar {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
   width: 260px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   z-index: 700;
@@ -193,8 +193,8 @@
   border-radius: 6px;
 
   svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     stroke-width: 2.5px;
     flex-shrink: 0;
     margin-right: 13px;
@@ -360,7 +360,17 @@
   display: none;
   flex-direction: column;
   margin-left: 20px;
-  padding-left: 21px;
+  padding-left: 22px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 0;
+    border-left: 1px solid transparent;
+  }
 }
 
 .sub-link {
@@ -377,9 +387,19 @@
   .nav-sidebar {
     transform: translateY(-8px);
     padding: 0 10px 10px;
+    display: none;
+
+    &.style-two .nav-link::before {
+      left: -10px;
+    }
   }
 
   + .nav-group { margin-top: -1px; }
+
+  &.show {
+    .nav-sidebar { display: flex; }
+    .nav-group-label::after { transform: rotate(180deg); }
+  }
 }
 
 .nav-group-label {
@@ -391,6 +411,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 
   &::after {
     content: '\EA4E';

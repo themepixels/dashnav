@@ -122,9 +122,12 @@
         background-color: $primary;
       }
     }
-  }
 
-  .nav-sub { border-left: 1px solid rgba($border-color, .6); }
+    &.style-two,
+    &.style-three {
+      .nav-sub::before { border-color: rgba($border-color, .6); }
+    }
+  }
 
   .sub-link {
     color: $gray-600;

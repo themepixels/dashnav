@@ -23,7 +23,7 @@
 
     svg {
       color: $gray-600;
-      stroke-width: 2px;
+      stroke-width: 1.5px;
     }
 
     .form-control { color: $light; }
@@ -61,7 +61,7 @@
         color: $light;
       }
 
-      svg { stroke-width: 2px; }
+      svg { stroke-width: 1.5px; }
 
       &.active {
         color: $light;
@@ -115,9 +115,12 @@
         background-color: $gray-600;
       }
     }
-  }
 
-  .nav-sub { border-left: 1px solid $gray-800; }
+    &.style-two,
+    &.style-three {
+      .nav-sub::before { border-color: $gray-800; }
+    }
+  }
 
   .sub-link {
     color: $gray-600;
