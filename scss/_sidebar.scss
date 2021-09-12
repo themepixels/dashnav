@@ -52,6 +52,17 @@
       }
     }
 
+    .nav-sub {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .sub-link {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 0;
+    }
+
     .sidebar-footer {
       padding-left: 10px;
       padding-right: 10px;
@@ -108,6 +119,17 @@
         visibility: visible;
         opacity: 1;
       }
+    }
+
+    .nav-sub {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .sub-link {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      height: 32px;
     }
 
     .sidebar-footer {
@@ -374,8 +396,11 @@
 }
 
 .sub-link {
+  height: 32px;
   padding: 5px 0;
   position: relative;
+  display: flex;
+  align-items: center;
 
   &.active { font-weight: 500; }
 }

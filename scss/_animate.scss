@@ -33,6 +33,14 @@
     }
   }
 
+  .nav-sub {
+    @include transition(opacity 0.2s);
+  }
+
+  .sub-link {
+    @include transition(all $transition-time-base);
+  }
+
   .avatar { @include transition(all $transition-time-base); }
 
   .avatar-body,
