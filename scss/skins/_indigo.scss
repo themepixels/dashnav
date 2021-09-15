@@ -5,8 +5,6 @@
   .sidebar {
     background-color: $color-05;
     @include font-smoothing();
-
-    hr { background-color: rgba($color-06, .25); }
   }
 
   .sidebar-logo span {
@@ -23,10 +21,6 @@
       color: $color-06;
       opacity: 1;
     }
-  }
-
-  .sidebar-search::after {
-    background-image: linear-gradient($color-05 10%, rgba($color-05, .5) 80%, transparent);
   }
 
   .search-body {
@@ -149,10 +143,6 @@
   }
 
   .nav-group-label { color: $color-06; }
-
-  .sidebar-footer::before {
-    background-image: linear-gradient(transparent, rgba($color-05, .5) 50%, $color-05);
-  }
 
   .avatar.online::after {
     box-shadow: 0 0 0 2px $color-05;

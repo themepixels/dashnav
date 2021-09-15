@@ -24,10 +24,6 @@
     span { color: $gray-700; }
   }
 
-  .sidebar-search::after {
-    background-image: linear-gradient(#fff 25%, rgba(#fff, .3) 75%, transparent);
-  }
-
   .search-body {
     background-color: $gray-100;
 
@@ -143,7 +139,7 @@
 
   .nav-group-label { color: $gray-600; }
 
-  .sidebar-footer::before {
+  .sidebar-footer {
     background-image: linear-gradient(transparent, rgba(#fff, .5) 50%, #fff);
   }
 
