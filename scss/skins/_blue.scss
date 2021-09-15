@@ -2,7 +2,11 @@
 .skin-blue {
   background-color: #fff;
 
-  .sidebar { background-color: #f7f9fd; }
+  .sidebar {
+    background-color: #f7f9fd;
+
+    hr { background-color: $gray-300; }
+  }
 
   .sidebar-logo span {
     background-color: $primary;
@@ -17,6 +21,10 @@
   .sidebar-logo-text {
     color: $dark;
     span { color: $primary; }
+  }
+
+  .sidebar-search::after {
+    background-image: linear-gradient(#f7f9fd 10%, rgba(#f7f9fd, .5) 80%, transparent);
   }
 
   .search-body {
@@ -137,6 +145,10 @@
   }
 
   .nav-group-label { color: $gray-600; }
+
+  .sidebar-footer::before {
+    background-image: linear-gradient(transparent, rgba(#f7f9fd, .5) 50%, #f7f9fd);
+  }
 
   .avatar-initial {
     background-color: $gray-800;

@@ -6,6 +6,8 @@
                       linear-gradient(20deg, #854cc4 40%, transparent),
                       linear-gradient(90deg, #1f32d9 30%, #6f85e2);
     @include font-smoothing();
+
+    hr { background-color: rgba(#fff, .08); }
   }
 
   .sidebar-logo span {
@@ -63,17 +65,13 @@
 
       svg { stroke-width: 1.5px; }
 
-      &.active {
-        color: $color-11;
-
-        svg { color: #FFF; }
-      }
+      &.active { color: $color-11; }
     }
 
     &.style-one {
       .nav-item.active {
         .nav-link {
-          color: $light;
+          color: rgba(#fff, .5);
           background-color: $gray-800;
 
           svg { fill: none; }
@@ -81,7 +79,7 @@
       }
 
       .nav-link {
-        color: $gray-600;
+        color: rgba(#fff, .5);
 
         &:hover {
           background-color: rgba($gray-800, .3);
@@ -89,8 +87,8 @@
         }
 
         &.active {
-          background-color: $gray-800;
-          color: $light;
+          background-color: rgba(#fff, .06);
+          color: $color-11;
 
           svg { fill: none; }
         }
@@ -100,7 +98,7 @@
     &.style-two {
       .nav-link::before,
       .sub-link::before {
-        background-color: $light;
+        background-color: $color-11;
       }
     }
 
@@ -108,7 +106,7 @@
       .nav-link::before,
       .nav-link:not(.with-sub)::after,
       .sub-link::before {
-        background-color: $gray-600;
+        background-color: $color-11;
       }
     }
 
