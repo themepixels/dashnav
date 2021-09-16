@@ -5,7 +5,7 @@
   > .ps__rail-y {
     width: 2px;
     background-color: rgba(darken($gray-100,60%), .06);
-    z-index: 10;
+    z-index: 200;
     position: absolute;
     left: auto !important;
     right: 0;
