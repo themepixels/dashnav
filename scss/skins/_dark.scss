@@ -4,6 +4,8 @@
   .sidebar {
     background-color: $dark;
     @include font-smoothing();
+
+    hr { background-color: rgba($gray-800, .6); }
   }
 
   .sidebar-logo span {

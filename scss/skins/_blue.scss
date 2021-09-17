@@ -2,7 +2,11 @@
 .skin-blue {
   background-color: #fff;
 
-  .sidebar { background-color: #f7f9fd; }
+  .sidebar {
+    background-color: #f7f9fd;
+
+    hr { background-color: darken(#f7f9fd, 5%); }
+  }
 
   .sidebar-logo span {
     background-color: $primary;

@@ -6,6 +6,8 @@
                       linear-gradient(20deg, #854cc4 40%, transparent),
                       linear-gradient(90deg, #1f32d9 30%, #6f85e2);
     @include font-smoothing();
+
+    hr { background-color: rgba(#fff, .08); }
   }
 
   .sidebar-logo span {
@@ -74,22 +76,22 @@
       .nav-item.active {
         .nav-link {
           color: $light;
-          background-color: $gray-800;
+          background-color: rgba($light, .1);
 
           svg { fill: none; }
         }
       }
 
       .nav-link {
-        color: $gray-600;
+        color: rgba(#FFF, .5);
 
         &:hover {
-          background-color: rgba($gray-800, .3);
+          background-color: rgba($light, .05);
           color: $light;
         }
 
         &.active {
-          background-color: $gray-800;
+          background-color: rgba($light, .1);
           color: $light;
 
           svg { fill: none; }

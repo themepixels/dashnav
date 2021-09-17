@@ -5,6 +5,8 @@
   .sidebar {
     background-color: $color-01;
     @include font-smoothing();
+
+    hr { background-color: lighten($color-01, 5%); }
   }
 
   .sidebar-logo span {

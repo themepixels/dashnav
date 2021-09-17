@@ -3410,7 +3410,7 @@ progress {
     .sidebar.minimized.expand .footer-menu {
       display: flex; }
   .sidebar hr {
-    margin: 0 20px;
+    margin: 0 30px;
     opacity: 1; }
 
 .sidebar-header {
@@ -3778,7 +3778,7 @@ progress {
     background-color: #fff;
     box-shadow: 1px 0 1px rgba(220, 228, 242, 0.25), 2px 0 2px rgba(220, 228, 242, 0.2), 4px 0 4px rgba(220, 228, 242, 0.15), 8px 0 8px rgba(220, 228, 242, 0.1), 16px 0 16px rgba(220, 228, 242, 0.05); }
     .skin-base .sidebar hr {
-      background-color: #dce4f2; }
+      background-color: #e9edf7; }
   .skin-base .sidebar-logo span {
     background-color: #142341; }
     .skin-base .sidebar-logo span::before, .skin-base .sidebar-logo span::after {
@@ -3865,6 +3865,8 @@ progress {
   background-color: #fff; }
   .skin-blue .sidebar {
     background-color: #f7f9fd; }
+    .skin-blue .sidebar hr {
+      background-color: #e3eaf8; }
   .skin-blue .sidebar-logo span {
     background-color: #0d6efd; }
     .skin-blue .sidebar-logo span::before, .skin-blue .sidebar-logo span::after {
@@ -3959,6 +3961,8 @@ progress {
     background-color: #142341;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
+    .skin-dark .sidebar hr {
+      background-color: rgba(39, 56, 92, 0.6); }
   .skin-dark .sidebar-logo span {
     background-color: #0d6efd; }
     .skin-dark .sidebar-logo span::before, .skin-dark .sidebar-logo span::after {
@@ -4052,6 +4056,8 @@ progress {
     background-color: #1f2d3e;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
+    .skin-red .sidebar hr {
+      background-color: #28394f; }
   .skin-red .sidebar-logo span {
     background-color: #EA5455; }
     .skin-red .sidebar-logo span::before, .skin-red .sidebar-logo span::after {
@@ -4148,6 +4154,8 @@ progress {
     background-color: #4A4DE7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
+    .skin-indigo .sidebar hr {
+      background-color: rgba(255, 255, 255, 0.08); }
   .skin-indigo .sidebar-logo span {
     background-color: #F1FAFB; }
     .skin-indigo .sidebar-logo span::before {
@@ -4246,6 +4254,8 @@ progress {
     background-image: linear-gradient(60deg, #14184e, transparent 65%), linear-gradient(20deg, #854cc4 40%, transparent), linear-gradient(90deg, #1f32d9 30%, #6f85e2);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
+    .skin-gradient .sidebar hr {
+      background-color: rgba(255, 255, 255, 0.08); }
   .skin-gradient .sidebar-logo span {
     background-color: #FFF; }
     .skin-gradient .sidebar-logo span::before {
@@ -4290,16 +4300,16 @@ progress {
         color: #FFF; }
   .skin-gradient .nav-sidebar.style-one .nav-item.active .nav-link {
     color: #f7f9fd;
-    background-color: #27385c; }
+    background-color: rgba(247, 249, 253, 0.1); }
     .skin-gradient .nav-sidebar.style-one .nav-item.active .nav-link svg {
       fill: none; }
   .skin-gradient .nav-sidebar.style-one .nav-link {
-    color: #7586a7; }
+    color: rgba(255, 255, 255, 0.5); }
     .skin-gradient .nav-sidebar.style-one .nav-link:hover {
-      background-color: rgba(39, 56, 92, 0.3);
+      background-color: rgba(247, 249, 253, 0.05);
       color: #f7f9fd; }
     .skin-gradient .nav-sidebar.style-one .nav-link.active {
-      background-color: #27385c;
+      background-color: rgba(247, 249, 253, 0.1);
       color: #f7f9fd; }
       .skin-gradient .nav-sidebar.style-one .nav-link.active svg {
         fill: none; }
