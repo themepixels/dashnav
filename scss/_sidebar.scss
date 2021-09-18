@@ -79,6 +79,9 @@
     .footer-menu { display: none; }
 
     + .content { margin-left: 60px; }
+
+    .nav-group.show { padding-top: 20px; }
+    .nav-group-label { display: none; }
   }
 
   &.minimized.expand {
@@ -130,6 +133,14 @@
       padding-top: 5px;
       padding-bottom: 5px;
       height: 32px;
+    }
+
+    .nav-group.show { padding-top: 0; }
+    .nav-group-label { display: flex;; }
+
+    .nav-group .nav-sidebar {
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     .sidebar-footer {
@@ -437,6 +448,7 @@
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  white-space: nowrap;
   position: relative;
   display: flex;
   align-items: center;
@@ -463,16 +475,6 @@
   padding-bottom: 20px;
   height: 70px;
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 40px;
-    top: -40px;
-    z-index: 100;
-  }
 }
 
 .avatar {

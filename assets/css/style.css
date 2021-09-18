@@ -3365,6 +3365,10 @@ progress {
       display: none; }
     .sidebar.minimized + .content {
       margin-left: 60px; }
+    .sidebar.minimized .nav-group.show {
+      padding-top: 20px; }
+    .sidebar.minimized .nav-group-label {
+      display: none; }
   .sidebar.minimized.expand {
     width: 260px; }
     .sidebar.minimized.expand .sidebar-header {
@@ -3398,6 +3402,13 @@ progress {
       padding-top: 5px;
       padding-bottom: 5px;
       height: 32px; }
+    .sidebar.minimized.expand .nav-group.show {
+      padding-top: 0; }
+    .sidebar.minimized.expand .nav-group-label {
+      display: flex; }
+    .sidebar.minimized.expand .nav-group .nav-sidebar {
+      padding-left: 10px;
+      padding-right: 10px; }
     .sidebar.minimized.expand .sidebar-footer {
       padding-left: 20px;
       padding-right: 20px; }
@@ -3628,6 +3639,7 @@ progress {
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  white-space: nowrap;
   position: relative;
   display: flex;
   align-items: center;
@@ -3652,14 +3664,6 @@ progress {
   padding-bottom: 20px;
   height: 70px;
   position: relative; }
-  .sidebar-footer::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 40px;
-    top: -40px;
-    z-index: 100; }
 
 .avatar {
   flex-shrink: 0;
@@ -4276,7 +4280,7 @@ progress {
     .skin-gradient .search-body .form-control {
       color: #f7f9fd; }
     .skin-gradient .search-body .form-control::placeholder {
-      color: #7586a7; }
+      color: rgba(247, 249, 253, 0.35); }
     .skin-gradient .search-body.onfocus {
       background-color: transparent;
       border-color: rgba(255, 255, 255, 0.6); }
@@ -4289,37 +4293,35 @@ progress {
     .skin-gradient .nav-sidebar .nav-item.active .nav-link svg {
       color: #3EDBF0; }
   .skin-gradient .nav-sidebar .nav-link {
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(247, 249, 253, 0.6); }
     .skin-gradient .nav-sidebar .nav-link:hover {
       color: #f7f9fd; }
     .skin-gradient .nav-sidebar .nav-link svg {
       stroke-width: 1.5px; }
     .skin-gradient .nav-sidebar .nav-link.active {
       color: #3EDBF0; }
-      .skin-gradient .nav-sidebar .nav-link.active svg {
-        color: #FFF; }
   .skin-gradient .nav-sidebar.style-one .nav-item.active .nav-link {
-    color: #f7f9fd;
+    color: #3EDBF0;
     background-color: rgba(247, 249, 253, 0.1); }
     .skin-gradient .nav-sidebar.style-one .nav-item.active .nav-link svg {
       fill: none; }
   .skin-gradient .nav-sidebar.style-one .nav-link {
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(247, 249, 253, 0.5); }
     .skin-gradient .nav-sidebar.style-one .nav-link:hover {
       background-color: rgba(247, 249, 253, 0.05);
       color: #f7f9fd; }
     .skin-gradient .nav-sidebar.style-one .nav-link.active {
       background-color: rgba(247, 249, 253, 0.1);
-      color: #f7f9fd; }
+      color: #3EDBF0; }
       .skin-gradient .nav-sidebar.style-one .nav-link.active svg {
         fill: none; }
   .skin-gradient .nav-sidebar.style-two .nav-link::before,
   .skin-gradient .nav-sidebar.style-two .sub-link::before {
-    background-color: #f7f9fd; }
+    background-color: #3EDBF0; }
   .skin-gradient .nav-sidebar.style-three .nav-link::before,
   .skin-gradient .nav-sidebar.style-three .nav-link:not(.with-sub)::after,
   .skin-gradient .nav-sidebar.style-three .sub-link::before {
-    background-color: #7586a7; }
+    background-color: #3EDBF0; }
   .skin-gradient .nav-sidebar.style-two .nav-sub::before, .skin-gradient .nav-sidebar.style-three .nav-sub::before {
     border-color: rgba(255, 255, 255, 0.06); }
   .skin-gradient .sub-link {

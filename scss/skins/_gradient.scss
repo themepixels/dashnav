@@ -34,7 +34,7 @@
 
     .form-control { color: $light; }
     .form-control::placeholder {
-      color: $gray-600;
+      color: rgba($light, .35);
     }
 
     &.onfocus {
@@ -59,7 +59,7 @@
     }
 
     .nav-link {
-      color: rgba(#FFF, .5);
+      color: rgba($light, .6);
 
       &:hover { color: $light; }
 
@@ -67,15 +67,13 @@
 
       &.active {
         color: $color-11;
-
-        svg { color: #FFF; }
       }
     }
 
     &.style-one {
       .nav-item.active {
         .nav-link {
-          color: $light;
+          color: $color-11;
           background-color: rgba($light, .1);
 
           svg { fill: none; }
@@ -83,7 +81,7 @@
       }
 
       .nav-link {
-        color: rgba(#FFF, .5);
+        color: rgba($light, .5);
 
         &:hover {
           background-color: rgba($light, .05);
@@ -92,7 +90,7 @@
 
         &.active {
           background-color: rgba($light, .1);
-          color: $light;
+          color: $color-11;
 
           svg { fill: none; }
         }
@@ -102,7 +100,7 @@
     &.style-two {
       .nav-link::before,
       .sub-link::before {
-        background-color: $light;
+        background-color: $color-11;
       }
     }
 
@@ -110,7 +108,7 @@
       .nav-link::before,
       .nav-link:not(.with-sub)::after,
       .sub-link::before {
-        background-color: $gray-600;
+        background-color: $color-11;
       }
     }
 
