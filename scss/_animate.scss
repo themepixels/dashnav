@@ -1,7 +1,7 @@
 
 .animate {
   .sidebar {
-    @include transition(width $transition-time-base);
+    @include transition(all $transition-time-base);
   }
 
   .sidebar-header {
@@ -49,6 +49,6 @@
   }
 
   .content {
-    @include transition(margin $transition-time-base);
+    @include transition(all $transition-time-base);
   }
 }

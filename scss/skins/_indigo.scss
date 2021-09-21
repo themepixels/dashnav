@@ -144,7 +144,7 @@
     border-bottom-color: lighten($color-05, 5%);
   }
 
-  .nav-group-label { color: $color-06; }
+  .nav-group-label { color: rgba($color-06, .75); }
 
   .avatar.online::after {
     box-shadow: 0 0 0 2px $color-05;

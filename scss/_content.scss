@@ -1,8 +1,11 @@
 
 .content {
   position: relative;
-  margin-left: 260px;
   min-height: 100vh;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 260px;
+  }
 }
 
 .content-header {

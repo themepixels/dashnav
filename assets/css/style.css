@@ -3310,15 +3310,27 @@ progress {
   .d-print-none {
     display: none !important; } }
 
+.sidebar-show .sidebar {
+  left: 0;
+  opacity: 1; }
+
+.sidebar-show .content {
+  transform: translateX(260px); }
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -260px;
   width: 260px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  z-index: 700; }
+  z-index: 700;
+  opacity: 0; }
+  @media (min-width: 992px) {
+    .sidebar {
+      left: 0;
+      opacity: 1; } }
   .sidebar.minimized {
     width: 60px; }
     .sidebar.minimized .sidebar-header {
@@ -3367,7 +3379,9 @@ progress {
       margin-left: 60px; }
     .sidebar.minimized .nav-group.show {
       padding-top: 20px; }
-    .sidebar.minimized .nav-group-label {
+      .sidebar.minimized .nav-group.show .nav-group-label {
+        display: none; }
+    .sidebar.minimized .nav-group:not(.show) {
       display: none; }
   .sidebar.minimized.expand {
     width: 260px; }
@@ -3404,8 +3418,10 @@ progress {
       height: 32px; }
     .sidebar.minimized.expand .nav-group.show {
       padding-top: 0; }
-    .sidebar.minimized.expand .nav-group-label {
-      display: flex; }
+      .sidebar.minimized.expand .nav-group.show .nav-group-label {
+        display: flex; }
+    .sidebar.minimized.expand .nav-group:not(.show) {
+      display: block; }
     .sidebar.minimized.expand .nav-group .nav-sidebar {
       padding-left: 10px;
       padding-right: 10px; }
@@ -3716,8 +3732,10 @@ progress {
 
 .content {
   position: relative;
-  margin-left: 260px;
   min-height: 100vh; }
+  @media (min-width: 992px) {
+    .content {
+      margin-left: 260px; } }
 
 .content-header {
   padding: 20px 25px;
@@ -4236,7 +4254,7 @@ progress {
     border-top-color: #6163ea;
     border-bottom-color: #6163ea; }
   .skin-indigo .nav-group-label {
-    color: #7EA6F4; }
+    color: rgba(126, 166, 244, 0.75); }
   .skin-indigo .avatar.online::after {
     box-shadow: 0 0 0 2px #4A4DE7;
     background-color: #20c997; }
@@ -4350,7 +4368,7 @@ progress {
       color: #3a4c70; }
 
 .animate .sidebar {
-  transition: width 0.3s; }
+  transition: all 0.3s; }
   @media (prefers-reduced-motion: reduce) {
     .animate .sidebar {
       transition: none; } }
@@ -4425,7 +4443,7 @@ progress {
       transition: none; } }
 
 .animate .content {
-  transition: margin 0.3s; }
+  transition: all 0.3s; }
   @media (prefers-reduced-motion: reduce) {
     .animate .content {
       transition: none; } }
