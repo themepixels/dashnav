@@ -3,9 +3,7 @@ Premium Dashboard Navigation Menu Template for FREE!
 
 [SEE DEMO](http://themepixels.me/application/dashnav/)
 
-<a href="http://themepixels.me/application/dashnav/">
-  <img src="http://themepixels.me/application/dashnav/preview.jpg" alt="DashNav" width="70%">
-</a>
+<img src="http://themepixels.me/application/dashnav/preview.jpg" alt="DashNav" width="70%">
 
 ## Features
 - Bootstrap 5
