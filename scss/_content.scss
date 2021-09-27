@@ -31,15 +31,19 @@
 .content-body {
   padding: 20px 35px;
 
-  .nav { display: flex; }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .nav-link {
     display: block;
     padding: 8px 20px;
     border: 1.5px solid transparent;
     border-radius: 6px;
-
-    + .nav-link { margin-left: 10px; }
+    white-space: nowrap;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 }
 
